@@ -1,0 +1,26 @@
+<div id="<%= dom_id post %>">
+  <p>
+    <strong>Body:</strong>
+    <%= post.body %>
+  </p>
+
+  <p>
+    <strong>Shark:</strong>
+    <%= post.shark.name %>
+  </p>
+
+  <p>
+    <strong> Shark detail:</strong>
+    <%= link_to "Show Shark", [@shark] %>
+  </p>
+
+  <p>
+    <strong>Edit:</strong>
+    <%= link_to "Edit post", edit_shark_post_path(@shark, post) %>
+  </p>
+  <p>
+    <strong>Edit:</strong>
+    <%= link_to "Destroy post", [@shark, post], method: :delete, data: { confirm: 'Are you sure?' } %>
+  </p>
+
+</div>
